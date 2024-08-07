@@ -1,0 +1,60 @@
+body {
+    background: #f5f5dc; /* cream */
+}
+
+.box-area {
+    width: 930px;
+}
+
+.left-box {
+    background: #8b4513; /* brown */
+}
+
+.left-box img {
+    width: 250px;
+}
+
+/*------------ Right box ------------*/
+.right-box {
+    padding: 40px 30px 40px 40px;
+}
+
+/*------------ Custom Placeholder ------------*/
+::placeholder {
+    font-size: 16px;
+}
+
+.rounded-4 {
+    border-radius: 20px;
+}
+
+.rounded-5 {
+    border-radius: 30px;
+}
+
+.foot {
+    background: #8b4513; /* brown */
+}
+.btn1{
+    background-color: #8b4513; /* brown */
+     border-color: #8b4513; /* brown */
+     color: #f5f5dc; /* cream */
+}
+.btn1 :hover{
+    background-color: #d2b48c; /* tan */
+    border-color: #d2b48c; /* tan */
+    color: #f5f5dc;
+}
+/*------------ For small screens------------*/
+@media only screen and (max-width: 768px) {
+    .box-area {
+        margin: 0 10px;
+    }
+    .left-box {
+        height: 100px;
+        overflow: hidden;
+    }
+    .right-box {
+        padding: 20px;
+    }
+}
