@@ -107,6 +107,7 @@ $absentPercentage = $totalHours > 0 ? ($absentHours / $totalHours) * 100 : 0;
         <p>Absent Hours: <?php echo $absentHours; ?></p>
         <p>Absent Percentage: <?php echo number_format($absentPercentage, 2); ?>%</p>
 
+        <a href="includes/download.inc.php?studentID=<?php echo $studentID; ?>" class="btn btn-success">Download Attendance PDF</a>
         <a href="tchDashboard.php" class="btn btn-primary">Back to Dashboard</a>
         </div>
     </div>
