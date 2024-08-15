@@ -97,19 +97,19 @@ require_once 'includes/dbcon.inc.php';
         <!--//QR CODE-->
 
         <!--ATTENDNACE-->
-<!--      <section id="attendance" class="full-height px-lg-5">
+    <section id="attendance" class="full-height px-lg-5">
             <div class="container">
                 <div class="justify-content-center text-center " data-aos="fade-up">
                     <h1 class="text-brand">Attendance</h1>
                     <div class="row ">
                         <div class="col-12 pb-4" data-aos="fade-up">
                             <h6 class="text-brand">View your attendance</h6>
-                            <a href="viewA.php" class="btn btn-primary">View Attendance</a>
+                            <a href="viewA.php" class="btn btn-brand fw-bold">View Attendance</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>  -->
+        </section> 
         <!--//STUDENT-->
 
        
