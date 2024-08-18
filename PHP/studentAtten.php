@@ -47,7 +47,7 @@ $absentPercentage = $totalHours > 0 ? ($absentHours / $totalHours) * 100 : 0;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Attendance</title>
-    <link rel="stylesheet" href="..\CSS\styleD.css"> <!-- Update the path as necessary -->
+    <link rel="stylesheet" href="..\CSS\styleD.css"> 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
@@ -111,8 +111,7 @@ $absentPercentage = $totalHours > 0 ? ($absentHours / $totalHours) * 100 : 0;
         <a href="tchDashboard.php" class="btn btn-primary">Back to Dashboard</a>
         </div>
     </div>
-       
-    </div>
+</div>
 </section>
    
 </div>
