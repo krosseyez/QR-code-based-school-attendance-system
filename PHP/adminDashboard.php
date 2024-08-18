@@ -75,7 +75,7 @@ $students = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <li class="nav-item">
                         <a class="nav-link" href="#delete">Delete User</a>
                     </li>
-                    
+
                     <li class="nav-item">
                         <a class="nav-link" href="#createDepartment">Department</a>
                     </li>
@@ -109,7 +109,7 @@ $students = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <a href="#" class="link-custom">.......Call: (233) 3454 2342</a>
                     </div>
                 </div>
-                
+
                 <div class="justify-content-center text-center " data-aos="fade-up">
                     <h1 class="text-brand">Create a User</h1>
                     <div class="row ">
@@ -273,7 +273,7 @@ $students = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 </div>
                                 <div class="form-group col-12">
                                     <input type="text" class="form-control" name="className" placeholder="Class Name">
-                                    </div>
+                                </div>
                                 <div class="form-group col-12 d-grid">
                                     <button type="submit" class="btn btn-brand fw-bold">Submit</button>
                                 </div>

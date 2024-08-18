@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-   
+
 
     try {
         if ($type === 'teacher') {
@@ -50,12 +50,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: ../adminDashboard.php?error=" . urlencode($_SESSION['error']));
         } else {
             $error = "Error: " . $e->getMessage();
-             header("Location: ../adminDashboard.php?error=" . urlencode($_SESSION['error']));
+            header("Location: ../adminDashboard.php?error=" . urlencode($_SESSION['error']));
         }
         exit;
     } catch (Exception $e) {
         $error = "Error: " . $e->getMessage();
-         header("Location: ../adminDashboard.php?error=" . urlencode($_SESSION['error']));
+        header("Location: ../adminDashboard.php?error=" . urlencode($_SESSION['error']));
         exit;
     }
 } else {

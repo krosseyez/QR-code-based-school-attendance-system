@@ -8,7 +8,8 @@ session_start();
 
 require_once 'dbcon.inc.php';
 
-function regenerate_session_id_loggedIn($userId) {
+function regenerate_session_id_loggedIn($userId)
+{
     session_regenerate_id(true);
     $newSessionId = session_create_id();
     $sessionId = $newSessionId . "_" . $userId;
@@ -16,7 +17,8 @@ function regenerate_session_id_loggedIn($userId) {
     $_SESSION["last_regeneration"] = time();
 }
 
-function regenerate_session_id() {
+function regenerate_session_id()
+{
     session_regenerate_id(true);
     $_SESSION["last_regeneration"] = time();
 }

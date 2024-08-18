@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    switch($user) {
+    switch ($user) {
         case 'admin':
             $query = "SELECT * FROM adminn WHERE email = :email AND pwd = :pwd";
             break;
@@ -41,22 +41,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($stmt->rowCount() > 0) {
         // User exists, start session and redirect based on user type
         $userData = $stmt->fetch(PDO::FETCH_ASSOC);
-        
-        $_SESSION["user_id"] = $userData["{$user}ID"]; 
+
+        $_SESSION["user_id"] = $userData["{$user}ID"];
         $_SESSION["firstName"] = $userData["firstName"];
         $_SESSION["lastName"] = $userData["lastName"];
         $_SESSION["email"] = $email;
 
-        switch($user) {
+        switch ($user) {
             case 'admin':
                 header("Location:../adminDashboard.php");
                 break;
             case 'student':
-                $_SESSION["student_id"] = $userData["studentID"]; 
+                $_SESSION["student_id"] = $userData["studentID"];
                 header("Location:../stdDashboard.php");
                 break;
             case 'teacher':
-                $_SESSION["teacher_id"] = $userData["teacherID"]; 
+                $_SESSION["teacher_id"] = $userData["teacherID"];
                 header("Location:../tchDashboard.php");
                 break;
         }

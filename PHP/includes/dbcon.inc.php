@@ -12,7 +12,8 @@ try {
 }
 
 if (!function_exists('getAllStudents')) {
-    function getAllStudents() {
+    function getAllStudents()
+    {
         global $pdo;
         $stmt = $pdo->prepare("SELECT * FROM student");
         $stmt->execute();

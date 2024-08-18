@@ -33,6 +33,7 @@ QRcode::png($uniqueData, $qrFilePath, QR_ECLEVEL_L, 10, 2);
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,22 +41,24 @@ QRcode::png($uniqueData, $qrFilePath, QR_ECLEVEL_L, 10, 2);
     <link rel="stylesheet" href="../../CSS/styleD.css" />
     <title>QRCode</title>
 </head>
+
 <body>
-<section id="attendance" class="full-height px-lg-5">
-            <div class="container">
-                <div class="justify-content-center text-center " data-aos="fade-up">
-                    <h1 class="text-brand">QR Code</h1>
-                    <div class="row ">
-                        <div class="col-12 pb-4" data-aos="fade-up">
-                            <img src="<?php echo $qrFilePath; ?>" alt="QR Code" class="img-fluid" style="max-width: 300px; margin: 20px auto;">
-                            <br>
-                            <button type="button" class="btn btn-brand fw-bold"><a href="../stdDashboard.php">Return to Dashboard</a></button>
-                        </div>
+    <section id="attendance" class="full-height px-lg-5">
+        <div class="container">
+            <div class="justify-content-center text-center " data-aos="fade-up">
+                <h1 class="text-brand">QR Code</h1>
+                <div class="row ">
+                    <div class="col-12 pb-4" data-aos="fade-up">
+                        <img src="<?php echo $qrFilePath; ?>" alt="QR Code" class="img-fluid"
+                            style="max-width: 300px; margin: 20px auto;">
+                        <br>
+                        <button type="button" class="btn btn-brand fw-bold"><a href="../stdDashboard.php">Return to
+                                Dashboard</a></button>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 </body>
+
 </html>
-
-

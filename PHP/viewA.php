@@ -44,16 +44,18 @@ $absentPercentage = $totalHours > 0 ? ($absentHours / $totalHours) * 100 : 0;
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Attendance</title>
-    <link rel="stylesheet" href="..\CSS\styleD.css"> 
+    <link rel="stylesheet" href="..\CSS\styleD.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
+
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container flex-lg-column">
             <a class="navbar-brand mx-lg-auto mb-lg-4" href="#">
                 <span class="h4 fw-bold" style="color:black;">PgLang University</span>
@@ -72,50 +74,53 @@ $absentPercentage = $totalHours > 0 ? ($absentHours / $totalHours) * 100 : 0;
         </div>
     </nav>
 
-<div class="content-wrapper">
+    <div class="content-wrapper">
 
-<section class="full-height px-lg-5">
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-        <h2>Attendance for <?php echo htmlspecialchars($student['firstName'] . ' ' . $student['lastName']); ?></h2>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Duration (hours)</th>
-                    <th>Class</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($attendances as $attendance): ?>
-                    <tr>
-                        <td><?php echo htmlspecialchars($attendance['date']); ?></td>
-                        <td><?php echo htmlspecialchars($attendance['duration']); ?></td>
-                        <td><?php echo htmlspecialchars($attendance['className']); ?></td>
-                        <td><?php echo htmlspecialchars($attendance['status']); ?></td>
-                    </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
+        <section class="full-height px-lg-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Attendance for
+                            <?php echo htmlspecialchars($student['firstName'] . ' ' . $student['lastName']); ?></h2>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Duration (hours)</th>
+                                    <th>Class</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($attendances as $attendance): ?>
+                                    <tr>
+                                        <td><?php echo htmlspecialchars($attendance['date']); ?></td>
+                                        <td><?php echo htmlspecialchars($attendance['duration']); ?></td>
+                                        <td><?php echo htmlspecialchars($attendance['className']); ?></td>
+                                        <td><?php echo htmlspecialchars($attendance['status']); ?></td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
 
-        <h3>Attendance Summary</h3>
-        <p>Total Hours: <?php echo $totalHours; ?></p>
-        <p>Absent Hours: <?php echo $absentHours; ?></p>
-        <p>Absent Percentage: <?php echo number_format($absentPercentage, 2); ?>%</p>
+                        <h3>Attendance Summary</h3>
+                        <p>Total Hours: <?php echo $totalHours; ?></p>
+                        <p>Absent Hours: <?php echo $absentHours; ?></p>
+                        <p>Absent Percentage: <?php echo number_format($absentPercentage, 2); ?>%</p>
 
-        <a href="includes/download.inc.php?studentID=<?php echo urlencode($studentID); ?>" class="btn btn-success">Download PDF</a>
-        <a href="stdDashboard.php" class="btn btn-primary">Back to Dashboard</a>
-        </div>
+                        <a href="includes/download.inc.php?studentID=<?php echo urlencode($studentID); ?>"
+                            class="btn btn-success">Download PDF</a>
+                        <a href="stdDashboard.php" class="btn btn-primary">Back to Dashboard</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </div>
-</div>
-</section>
 
-</div>
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
+
 </html>

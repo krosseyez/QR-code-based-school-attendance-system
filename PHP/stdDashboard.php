@@ -97,7 +97,7 @@ require_once 'includes/dbcon.inc.php';
         <!--//QR CODE-->
 
         <!--ATTENDNACE-->
-    <section id="attendance" class="full-height px-lg-5">
+        <section id="attendance" class="full-height px-lg-5">
             <div class="container">
                 <div class="justify-content-center text-center " data-aos="fade-up">
                     <h1 class="text-brand">Attendance</h1>
@@ -109,7 +109,7 @@ require_once 'includes/dbcon.inc.php';
                     </div>
                 </div>
             </div>
-        </section> 
+        </section>
         <!--//STUDENT-->
     </div>
 
@@ -119,7 +119,7 @@ require_once 'includes/dbcon.inc.php';
             document.getElementById('qrForm').submit();
         }
     </script>
-    
+
     <script src="../JS/aos.js"></script>
     <script src="../JS/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
